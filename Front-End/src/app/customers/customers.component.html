@@ -1,0 +1,19 @@
+<h2>Customer List</h2>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="cursor:pointer" *ngFor="let customer of customers" class='clickable-row' [routerLink]="['../customerDetails',customer.id]">
+        <!-- <a class="nav-link" > -->
+          <td>{{customer.name}}</td>
+          <td>{{customer.surname}}</td>
+        <!-- </a> -->
+      </tr>
+    </tbody>
+  </table>
+ 
